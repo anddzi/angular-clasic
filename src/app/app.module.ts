@@ -5,20 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './pages/main/main.component';
 import { P404Component } from './pages/p404/p404.component';
-import { LoginRegisterComponent } from './pages/auth/login-register/login-register.component';
+import { LoginRegisterComponent } from './modules/auth/pages/login-register/login-register.component';
+import { NavComponent } from './component/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     P404Component,
-    LoginRegisterComponent
+    LoginRegisterComponent,
+    NavComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
