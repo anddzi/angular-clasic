@@ -12,6 +12,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/auth/auth.module').then((mod) => mod.AuthModule),
   },
+  {
+    path: 'game',
+    loadChildren: () =>
+      import('./modules/game-runner/game-runner.module').then(
+        (mod) => mod.GameRunnerModule
+      ),
+  },
   // { path: 'auth', component: LoginRegisterComponent },
   { path: 'p404', component: P404Component },
   { path: '**', redirectTo: '/p404' },
