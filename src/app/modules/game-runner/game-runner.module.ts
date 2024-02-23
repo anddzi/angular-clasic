@@ -6,7 +6,7 @@ import { GameRunnerRoutingModule } from './game-runner-routing.module';
 import { StartComponent } from './pages/start/start.component';
 import { GameComponent } from './pages/game/game.component';
 
-const config: SocketIoConfig = { url: 'http://localhost:8988', options: {} };
+const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
 @NgModule({
   declarations: [StartComponent, GameComponent],

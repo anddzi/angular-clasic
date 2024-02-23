@@ -7,6 +7,9 @@ import { MainComponent } from './pages/main/main.component';
 import { P404Component } from './pages/p404/p404.component';
 import { LoginRegisterComponent } from './modules/auth/pages/login-register/login-register.component';
 import { NavComponent } from './component/nav/nav.component';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
 @NgModule({
   declarations: [
@@ -16,7 +19,7 @@ import { NavComponent } from './component/nav/nav.component';
     LoginRegisterComponent,
     NavComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, SocketIoModule.forRoot(config)],
   providers: [],
   bootstrap: [AppComponent],
 })
