@@ -6,7 +6,15 @@ import { map } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class SocketService {
+  public socketId: string = '';
+
   constructor(private socket: Socket) {}
+
+  async init() {
+    console.log('service working');
+    this.socket.on('set-socket-id', (id: string) => {});
+    return 'ok';
+  }
 
   sendMessage(msg: string) {
     this.socket.emit('chat-message-add', msg);
