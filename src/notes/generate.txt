@@ -4,3 +4,6 @@ Generate module with routing: ng g m modules/auth --routing
 
 Module game-runner:
 Generate page: ng g c modules/game-runner/pages/game
+
+Generate Service:
+ng g s modules/game-runner/services/socket

@@ -9,9 +9,9 @@ export class SocketService {
   constructor(private socket: Socket) {}
 
   sendMessage(msg: string) {
-    this.socket.emit('message', msg);
+    this.socket.emit('chat-message-add', msg);
   }
   getMessage() {
-    return this.socket.fromEvent('message').pipe(map((data) => data));
+    return this.socket.fromEvent('chat-message-add').pipe(map((data) => data));
   }
 }
